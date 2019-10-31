@@ -27,7 +27,22 @@ public class InfoActivity extends AppCompatActivity {
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
 
+        TextView address = (TextView) view;
+        Uri gMapUri = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
+        Intent gmapIntent = new Intent(Intent.ACTION_VIEW, gMapUri);
+        gmapIntent.setPackage("com.google.android.apps.maps");
+        if(gmapIntent.resolveActivity(getPackageManager()) != null){
+          startActivity(mapIntent);
+        }
+
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
+
+      Intent telIntent = new Intent(Intent.ACTION_DIAL);
+      telintent.setData(Uri.parse("tel:0123456789"));
+      if(intent.resolveActivity(getPackageManager()) != null){
+        startActivity(intent);
+      }
+
 }
