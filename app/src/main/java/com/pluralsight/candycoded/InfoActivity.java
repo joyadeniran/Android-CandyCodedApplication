@@ -31,18 +31,18 @@ public class InfoActivity extends AppCompatActivity {
         Uri gMapUri = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
         Intent gmapIntent = new Intent(Intent.ACTION_VIEW, gMapUri);
         gmapIntent.setPackage("com.google.android.apps.maps");
-        if(gmapIntent.resolveActivity(getPackageManager()) != null){
-          startActivity(mapIntent);
+        //if(gmapIntent.resolveActivity(getPackageManager()) != null){
+          startActivity(gmapIntent);
         }
 
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
-
+      String telString = "tel:0123456789"
       Intent telIntent = new Intent(Intent.ACTION_DIAL);
-      telintent.setData(Uri.parse("tel:0123456789"));
-      if(intent.resolveActivity(getPackageManager()) != null){
-        startActivity(intent);
+      telIntent.setData(Uri.parse(telString));
+      //if(intent.resolveActivity(getPackageManager()) != null){
+        startActivity(telIntent);
       }
 
 }
