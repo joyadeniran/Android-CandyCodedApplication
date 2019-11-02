@@ -23,19 +23,20 @@ public class InfoActivity extends AppCompatActivity {
                 load(uri).
                 into(candyStoreImageView);
 
-        TextView theAddress = (TextView) findViewById(R.id.text_view_address);
+        final TextView theAddress = (TextView) findViewById(R.id.text_view_address);
         theAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                launchMap();
+                createMapIntent(theAddress);
+
             }
         });
 
-        TextView phoneNumber = (TextView) findViewById(R.id.text_view_phone);
+        final TextView phoneNumber = (TextView) findViewById(R.id.text_view_phone);
         phoneNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                launchPhone();
+                createPhoneIntent(phoneNumber);
             }
         });
 
@@ -47,7 +48,7 @@ public class InfoActivity extends AppCompatActivity {
     // ***
 
 
-    public void launchMap() {
+    public void createMapIntent(View view) {
         Uri gMapUri = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
         Intent gmapIntent = new Intent(Intent.ACTION_VIEW, gMapUri);
         gmapIntent.setPackage("com.google.android.apps.maps");
@@ -59,11 +60,12 @@ public class InfoActivity extends AppCompatActivity {
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
-    public void launchPhone() {
+    public void createPhoneIntent(View view) {
         Intent telIntent = new Intent(Intent.ACTION_DIAL);
         telIntent.setData(Uri.parse("tel:0123456789"));
-        if (telIntent.resolveActivity(getPackageManager()) != null) {
+        //if (telIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(telIntent);
-        }
+        //}
     }
+
 }
