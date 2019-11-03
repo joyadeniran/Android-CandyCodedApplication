@@ -16,6 +16,7 @@
         android:layout_marginTop="0dp"
         app:layout_constraintBottom_toTopOf="@+id/text_view_address"
         android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_address"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
