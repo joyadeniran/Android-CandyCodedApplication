@@ -1,9 +1,11 @@
 package com.pluralsight.candycoded;
-
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -20,7 +22,6 @@ public class InfoActivity extends AppCompatActivity {
                 load(uri).
                 into(candyStoreImageView);
 
-<<<<<<< HEAD
         final TextView theAddress = (TextView) findViewById(R.id.text_view_address);
         theAddress.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,8 +38,6 @@ public class InfoActivity extends AppCompatActivity {
                 createPhoneIntent(phoneNumber);
             }
         });
-=======
->>>>>>> parent of 326b9d8... All 4 tasks completed.
 
     }
 
@@ -46,7 +45,6 @@ public class InfoActivity extends AppCompatActivity {
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
 
-<<<<<<< HEAD
 
     public void createMapIntent(View view) {
         Uri gMapUri = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
@@ -68,9 +66,4 @@ public class InfoActivity extends AppCompatActivity {
         //}
     }
 
-=======
-    // ***
-    // TODO - Task 3 - Launch the Phone Activity
-    // ***
->>>>>>> parent of 326b9d8... All 4 tasks completed.
 }
