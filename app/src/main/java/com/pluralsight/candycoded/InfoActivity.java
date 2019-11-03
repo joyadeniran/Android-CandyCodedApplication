@@ -1,4 +1,5 @@
 package com.pluralsight.candycoded;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ public class InfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info);
 
         Uri uri = Uri.parse("android.resource://com.codeschool.candycoded/" + R.drawable.store_front);
-        ImageView candyStoreImageView = (ImageView)findViewById(R.id.image_view_candy_store);
+        ImageView candyStoreImageView = (ImageView) findViewById(R.id.image_view_candy_store);
         Picasso.with(this).
                 load(uri).
                 into(candyStoreImageView);
@@ -41,7 +42,8 @@ public class InfoActivity extends AppCompatActivity {
 
     }
 
-    // ***
+
+// ***
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
 
