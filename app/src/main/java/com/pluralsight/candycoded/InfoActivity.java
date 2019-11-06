@@ -23,46 +23,46 @@ public class InfoActivity extends AppCompatActivity {
                 load(uri).
                 into(candyStoreImageView);
 
-        //final TextView theAddress = (TextView) findViewById(R.id.text_view_address);
-      //  theAddress.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-          //  public void onClick(View view) {
-            //    createMapIntent(theAddress);
+        final TextView theAddress = (TextView) findViewById(R.id.text_view_address);
+        theAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createMapIntent(theAddress);
 
-            //}
-       // });
+            }
+        });
 
         final TextView phoneNumber = (TextView) findViewById(R.id.text_view_phone);
-//        phoneNumber.setOnClickListener(new View.OnClickListener() {
-  //          @Override
-    //        public void onClick(View view) {
-      //          createPhoneIntent(phoneNumber);
-        //    }
-        //});
+        phoneNumber.setOnClickListener(new View.OnClickListener() {
+          @Override
+            public void onClick(View view) {
+                createPhoneIntent(phoneNumber);
+            }
+        });
 
     }
 
 
-// ***
+    // ***
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
 
-    //    TextView address = (TextView) view;
-      //  Uri gMapUri = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
-    //    Intent gmapIntent = new Intent(Intent.ACTION_VIEW, gMapUri);
-      //  gmapIntent.setPackage("com.google.android.apps.maps");
-        //if(gmapIntent.resolveActivity(getPackageManager()) != null){
-      //    startActivity(gmapIntent);
-    //    }
+        TextView address = (TextView) view;
+        Uri gMapUri = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
+        Intent gmapIntent = new Intent(Intent.ACTION_VIEW, gMapUri);
+        gmapIntent.setPackage("com.google.android.apps.maps");
+          if(gmapIntent.resolveActivity(getPackageManager()) != null){
+            startActivity(gmapIntent);
+        }
 
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
-    //  String telString = "tel:0123456789"
-    //  Intent telIntent = new Intent(Intent.ACTION_DIAL);
-    //  telIntent.setData(Uri.parse(telString));
-      //if(intent.resolveActivity(getPackageManager()) != null){
-    //    startActivity(telIntent);
-    //  }
+      String telString = "tel:0123456789"
+      Intent telIntent = new Intent(Intent.ACTION_DIAL);
+      telIntent.setData(Uri.parse(telString));
+      if(intent.resolveActivity(getPackageManager()) != null){
+        startActivity(telIntent);
+      }
 
 }

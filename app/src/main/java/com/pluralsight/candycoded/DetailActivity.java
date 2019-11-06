@@ -72,20 +72,19 @@ public class DetailActivity extends AppCompatActivity {
     // TODO - Task 4 - Share the Current Candy with an Intent
     // ***
 
-  //  @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-      //  createShareIntent();
-      //  return super.onOptionsItemSelected(item);
-  //  }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        createShareIntent();
+        return super.onOptionsItemSelected(item);
+    }
 
-  //  public void createShareIntent(){
-    //    Intent shareIntent = new Intent(Intent.ACTION_SEND);
-  //      shareIntent.putExtra(Intent.EXTRA_TEXT, SHARE_DESCRIPTION + mCandyImageUrl + HASHTAG_CANDYCODED);
-  //      shareIntent.setType("text/plain");
-
-        //if (shareIntent != Intent.createChooser(shareIntent, null)){
-            //startActivity(shareIntent);
-        //}
+    public void createShareIntent(){
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, SHARE_DESCRIPTION + mCandyImageUrl + HASHTAG_CANDYCODED);
+        shareIntent.setType("text/plain");
+          if (shareIntent != Intent.createChooser(shareIntent, null)){
+            startActivity(shareIntent);
+        }
     }
 
 }
