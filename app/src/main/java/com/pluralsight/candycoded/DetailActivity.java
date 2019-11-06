@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,8 +56,7 @@ public class DetailActivity extends AppCompatActivity {
             TextView textViewDesc = (TextView) this.findViewById(R.id.text_view_desc);
             textViewDesc.setText(candyDesc);
 
-            ImageView imageView = (ImageView) this.findViewById(
-                    R.id.image_view_candy);
+            ImageView imageView = (ImageView) this.findViewById(R.id.image_view_candy);
             Picasso.with(this).load(mCandyImageUrl).into(imageView);
         }
     }
@@ -83,9 +83,9 @@ public class DetailActivity extends AppCompatActivity {
   //      shareIntent.putExtra(Intent.EXTRA_TEXT, SHARE_DESCRIPTION + mCandyImageUrl + HASHTAG_CANDYCODED);
   //      shareIntent.setType("text/plain");
 
-    //if (Intent shareIntent = Intent.createChooser(shareIntent, null)){
-        startActivity(shareIntent);
+        //if (shareIntent != Intent.createChooser(shareIntent, null)){
+            //startActivity(shareIntent);
+        //}
     }
 
-}
 }
